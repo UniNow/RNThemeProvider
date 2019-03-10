@@ -9,9 +9,9 @@ import {
 
 import { withTheme } from '../core/themeProvider';
 
-SettingsScreen = ({ theme, themes }) => {
+SettingsScreen = ({ theme, themes, setTheme }) => {
   renderItem = ({ item }) => (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => setTheme(item.key)}>
       <View
         style={[
           style.itemContainer,
