@@ -7,7 +7,7 @@ const STORAGE_KEY = 'THEME_ID';
 const ThemeContext = React.createContext();
 
 export const ThemeContextProvider = ({ children }) => {
-  const [themeID, setThemeID] = useState(THEMES[1].key);
+  const [themeID, setThemeID] = useState();
 
   useEffect(() => {
     (async () => {
