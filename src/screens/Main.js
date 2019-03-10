@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-import { theme } from '../core/themeProvider';
+import { withTheme } from '../core/themeProvider';
 
-MainScreen = () => {
+MainScreen = ({ theme }) => {
   return (
     <View style={[style.container, { backgroundColor: theme.backgroundColor }]}>
       <Text style={[style.text, { color: theme.color }]}>Main Part</Text>
@@ -23,4 +23,4 @@ const style = StyleSheet.create({
   },
 });
 
-export default MainScreen;
+export default withTheme(MainScreen);

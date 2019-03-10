@@ -7,9 +7,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import { themes, theme } from '../core/themeProvider';
+import { withTheme } from '../core/themeProvider';
 
-SettingsScreen = () => {
+SettingsScreen = ({ theme, themes }) => {
   renderItem = ({ item }) => (
     <TouchableOpacity>
       <View
@@ -56,4 +56,4 @@ const style = StyleSheet.create({
   itemText: { fontWeight: 'bold' },
 });
 
-export default SettingsScreen;
+export default withTheme(SettingsScreen);
