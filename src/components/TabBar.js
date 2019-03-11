@@ -10,12 +10,13 @@ const TabBar = props => {
       {...props}
       activeTintColor={props.theme.backgroundColor}
       labelStyle={style.label}
+      getLabelText={({ route }) => route.key.toUpperCase()}
     />
   );
 };
 
 const style = StyleSheet.create({
-  label: { fontSize: 18, fontWeight: '100', textTransform: 'uppercase' },
+  label: { fontSize: 22, fontWeight: '400' },
 });
 
 export default withTheme(TabBar);
